@@ -1,0 +1,57 @@
+2024-07-29T17:27:28.910+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] c.e.l.p.ProdreadyfeatureApplication      : Starting ProdreadyfeatureApplication using Java 22.0.2 with PID 62385 (/Users/pranaydange/allnewprojects/springboot/prodreadyfeature/target/classes started by pranaydange in /Users/pranaydange/allnewprojects/springboot/prodreadyfeature)
+2024-07-29T17:27:28.911+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] c.e.l.p.ProdreadyfeatureApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T17:27:28.948+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T17:27:28.951+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 1 JPA repository interface.
+2024-07-29T17:27:28.969+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-29T17:27:28.970+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T17:27:28.970+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T17:27:28.973+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-07-29T17:27:28.973+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 62 ms
+2024-07-29T17:27:28.979+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T17:27:28.980+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T17:27:28.982+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T17:27:28.982+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2024-07-29T17:27:28.998+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection org.postgresql.jdbc.PgConnection@66584a32
+2024-07-29T17:27:28.998+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2024-07-29T17:27:29.018+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T17:27:29.019+05:30  WARN 62385 --- [prodreadyfeature] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-07-29T17:27:29.019+05:30  WARN 62385 --- [prodreadyfeature] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "posts" does not exist, skipping
+2024-07-29T17:27:29.024+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T17:27:29.043+05:30  WARN 62385 --- [prodreadyfeature] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T17:27:29.057+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-29T17:27:29.059+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-29T17:27:29.060+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] c.e.l.p.ProdreadyfeatureApplication      : Started ProdreadyfeatureApplication in 0.165 seconds (process running for 2401.898)
+2024-07-29T17:27:29.060+05:30  INFO 62385 --- [prodreadyfeature] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-29T17:27:34.982+05:30  INFO 62385 --- [prodreadyfeature] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T17:27:34.986+05:30  INFO 62385 --- [prodreadyfeature] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2024-07-29T17:27:34.986+05:30  INFO 62385 --- [prodreadyfeature] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2024-07-29T17:27:36.051+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] c.e.l.p.ProdreadyfeatureApplication      : Starting ProdreadyfeatureApplication using Java 22.0.2 with PID 63240 (/Users/pranaydange/allnewprojects/springboot/prodreadyfeature/target/classes started by pranaydange in /Users/pranaydange/allnewprojects/springboot/prodreadyfeature)
+2024-07-29T17:27:36.052+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] c.e.l.p.ProdreadyfeatureApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T17:27:36.074+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-29T17:27:36.074+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-29T17:27:36.338+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T17:27:36.360+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interface.
+2024-07-29T17:27:36.618+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-29T17:27:36.624+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T17:27:36.624+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T17:27:36.639+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T17:27:36.640+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 565 ms
+2024-07-29T17:27:36.702+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T17:27:36.721+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T17:27:36.732+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T17:27:36.841+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T17:27:36.852+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T17:27:36.899+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f52700b
+2024-07-29T17:27:36.900+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T17:27:37.226+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T17:27:37.232+05:30  WARN 63240 --- [prodreadyfeature] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-07-29T17:27:37.232+05:30  WARN 63240 --- [prodreadyfeature] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "posts" does not exist, skipping
+2024-07-29T17:27:37.244+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T17:27:37.456+05:30  WARN 63240 --- [prodreadyfeature] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T17:27:37.593+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-29T17:27:37.603+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-29T17:27:37.608+05:30  INFO 63240 --- [prodreadyfeature] [restartedMain] c.e.l.p.ProdreadyfeatureApplication      : Started ProdreadyfeatureApplication in 1.79 seconds (process running for 2.012)
+2024-07-29T17:34:03.807+05:30  INFO 63240 --- [prodreadyfeature] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-07-29T17:34:03.829+05:30  INFO 63240 --- [prodreadyfeature] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T17:34:03.855+05:30  INFO 63240 --- [prodreadyfeature] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T17:34:03.857+05:30  INFO 63240 --- [prodreadyfeature] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

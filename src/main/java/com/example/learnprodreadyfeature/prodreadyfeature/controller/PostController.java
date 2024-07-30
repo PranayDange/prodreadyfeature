@@ -1,5 +1,7 @@
 package com.example.learnprodreadyfeature.prodreadyfeature.controller;
 
+import com.example.learnprodreadyfeature.prodreadyfeature.clients.impl.EmployeeClientImpl;
+import com.example.learnprodreadyfeature.prodreadyfeature.dto.EmployeeDTO;
 import com.example.learnprodreadyfeature.prodreadyfeature.dto.PostDto;
 import com.example.learnprodreadyfeature.prodreadyfeature.services.PostService;
 import lombok.RequiredArgsConstructor;
