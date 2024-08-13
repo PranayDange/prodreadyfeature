@@ -2,18 +2,22 @@ package com.example.learnprodreadyfeature.prodreadyfeature.services;
 
 import com.example.learnprodreadyfeature.prodreadyfeature.dto.PostDto;
 import com.example.learnprodreadyfeature.prodreadyfeature.entities.PostEntity;
+import com.example.learnprodreadyfeature.prodreadyfeature.entities.User;
 import com.example.learnprodreadyfeature.prodreadyfeature.exceptions.ResourceNotFoundException;
 import com.example.learnprodreadyfeature.prodreadyfeature.repositories.PostRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class PostServiceImpl implements PostService {
 
     private final PostRepository postRepository;
@@ -33,6 +37,8 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public PostDto getPostById(Long postId) {
+       User user=(User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+       log.error("User {}",user);
         PostEntity postEntity = postRepository
                 .findById(postId)
                 .orElseThrow(() -> new ResourceNotFoundException("Post id not found" + postId));
