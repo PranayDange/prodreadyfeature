@@ -1,6 +1,7 @@
 package com.example.learnprodreadyfeature.prodreadyfeature.config;
 
 import com.example.learnprodreadyfeature.prodreadyfeature.filters.JwtAuthFilter;
+import com.example.learnprodreadyfeature.prodreadyfeature.handlers.OAuth2SuccessHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,6 +26,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class WebSecurityConfig {
 
     private final JwtAuthFilter jwtAuthFilter;
+    private final OAuth2SuccessHandler oAuth2SuccessHandler;
 
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
@@ -33,17 +35,22 @@ public class WebSecurityConfig {
                         .ignoringRequestMatchers("/auth/**")  // Disable CSRF for /auth/** paths
                 )
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/posts", "/error", "/auth/**").permitAll()
+                        .requestMatchers("/posts", "/error", "/auth/**","/home.html").permitAll()
                         //.requestMatchers("/posts").authenticated()
                         .anyRequest().authenticated())
                 .sessionManagement(sessionConfig -> sessionConfig
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
+                .oauth2Login(oauth2Config -> oauth2Config
+                        .failureUrl("/login?error=true")
+                        .successHandler(oAuth2SuccessHandler)
+                );
 
         // .formLogin(Customizer.withDefaults());
 
         return httpSecurity.build();
     }
+
     @Bean
     AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();

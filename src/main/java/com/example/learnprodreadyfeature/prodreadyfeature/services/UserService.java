@@ -30,11 +30,15 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findByEmail(username).orElseThrow(() -> new BadCredentialsException("User with email " + username + " not fount"));
+        return userRepository.findByEmail(username).orElseThrow(() -> new BadCredentialsException("User with email " + username + " not found"));
     }
 
-    public User getUserById(Long userId){
-        return userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User with this id " + userId + " not fount"));
+    public User getUserById(Long userId) {
+        return userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User with this id " + userId + " not found"));
+    }
+
+    public User getUserByEmail(String email) {
+        return userRepository.findByEmail(email).orElse(null);
     }
 
     public UserDto signUp(SignUpDto signUpDto) {
@@ -47,6 +51,10 @@ public class UserService implements UserDetailsService {
         toBeCreateDByUser.setPass(passwordEncoder.encode(toBeCreateDByUser.getPass()));
         User savedUser = userRepository.save(toBeCreateDByUser);
         return modelMapper.map(savedUser, UserDto.class);
+    }
+
+    public User save(User newUser) {
+        return userRepository.save(newUser);
     }
 
     //moved to authService
