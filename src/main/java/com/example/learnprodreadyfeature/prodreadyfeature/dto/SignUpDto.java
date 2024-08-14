@@ -1,5 +1,6 @@
 package com.example.learnprodreadyfeature.prodreadyfeature.dto;
 
+import com.example.learnprodreadyfeature.prodreadyfeature.entities.enums.Permissions;
 import com.example.learnprodreadyfeature.prodreadyfeature.entities.enums.Role;
 import lombok.Data;
 
@@ -11,4 +12,5 @@ public class SignUpDto {
     private String pass;
     private String name;
     private Set<Role> roles;
+    private Set<Permissions> permissions;
 }

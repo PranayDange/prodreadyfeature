@@ -1,5 +1,6 @@
 package com.example.learnprodreadyfeature.prodreadyfeature.config;
 
+import com.example.learnprodreadyfeature.prodreadyfeature.entities.enums.Permissions;
 import com.example.learnprodreadyfeature.prodreadyfeature.filters.JwtAuthFilter;
 import com.example.learnprodreadyfeature.prodreadyfeature.handlers.OAuth2SuccessHandler;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import static com.example.learnprodreadyfeature.prodreadyfeature.entities.enums.Permissions.*;
 import static com.example.learnprodreadyfeature.prodreadyfeature.entities.enums.Role.ADMIN;
 import static com.example.learnprodreadyfeature.prodreadyfeature.entities.enums.Role.CREATOR;
 
@@ -47,6 +49,12 @@ public class WebSecurityConfig {
                         //.requestMatchers("/posts").authenticated()
                         .requestMatchers(HttpMethod.GET, "/posts/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/posts/**").hasAnyRole(ADMIN.name(), CREATOR.name())
+                        .requestMatchers(HttpMethod.POST, "/posts/**")
+                        .hasAnyAuthority(POST_CREATE.name())
+                        .requestMatchers(HttpMethod.GET, "/posts/**")
+                        .hasAuthority(POST_VIEW.name())
+                        .requestMatchers(HttpMethod.PUT, "/posts/**").hasAuthority(POST_UPDATE.name())
+                        .requestMatchers(HttpMethod.DELETE, "/posts/**").hasAuthority(POST_DELETE.name())
                         .anyRequest().authenticated())
                 .sessionManagement(sessionConfig -> sessionConfig
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
